@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -6,6 +7,7 @@ import { Router } from '@angular/router';
 
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @Component({
@@ -24,6 +26,7 @@ export class ProductReadComponent implements OnInit {
 
   constructor(
     public productServer: ProductService,
+    public dialog: MatDialog,
     private router: Router
   ) {
     this.loadProduct();
@@ -58,6 +61,19 @@ export class ProductReadComponent implements OnInit {
   deleteProduct(id: number): void {
     this.productServer.delete(id).subscribe(() => {
       this.loadProduct();
+    });
+  }
+
+  openDialog(id: number, productName: string) {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '300px',
+      data: {name: productName}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.deleteProduct(id);
+      }
     });
   }
 

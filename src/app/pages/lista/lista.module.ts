@@ -10,6 +10,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { DialogComponent } from 'src/app/components/product/product-read/dialog/dialog.component';
 
 
 
@@ -17,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     ListaComponent,
     ProductReadComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
@@ -25,8 +29,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatPaginatorModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
     LoginRoutingModule,
     MatIconModule
-  ]
+  ],
+  entryComponents: [DialogComponent],
 })
 export class ListaModule { }

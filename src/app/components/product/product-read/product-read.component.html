@@ -37,7 +37,7 @@
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Excluir</th>
       <td mat-cell *matCellDef="let row">
-        <button mat-icon-button aria-label="Excluir produto" (click)="deleteProduct(row.id)">
+        <button mat-icon-button aria-label="Excluir produto" (click)="openDialog(row.id, row.name)">
           <mat-icon>delete</mat-icon>
         </button>
       </td>
