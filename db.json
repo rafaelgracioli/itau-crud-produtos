@@ -3,8 +3,8 @@
     {
       "id": 1,
       "cod": 1,
-      "category": "atacado",
-      "name": "caneta"
+      "name": "caneta",
+      "category": "atacado"
     },
     {
       "id": 2,
@@ -23,30 +23,6 @@
       "cod": 4,
       "category": "atacado",
       "name": "lápis"
-    },
-    {
-      "cod": 33,
-      "name": "Teste De Nome",
-      "category": "varejo",
-      "id": 5
-    },
-    {
-      "cod": 333,
-      "name": "Teste Giovana Antônia Patrícia Moura",
-      "category": "varejo",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "cod": 22,
-      "name": "grade2",
-      "category": "internacional"
-    },
-    {
-      "cod": 12,
-      "name": "relógio",
-      "category": "internacional",
-      "id": 8
     }
   ]
 }

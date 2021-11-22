@@ -16,7 +16,7 @@ import { ProductService } from '../product.service';
 export class ProductReadComponent implements OnInit {
 
   products: Product[];
-  displayedColumns = ['cod', 'name', 'category', 'edit'];
+  displayedColumns = ['cod', 'name', 'category', 'edit', 'delete'];
   dataSource: MatTableDataSource<Product>;
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
@@ -26,14 +26,7 @@ export class ProductReadComponent implements OnInit {
     public productServer: ProductService,
     private router: Router
   ) {
-    this.productServer.read().subscribe(payments => {
-      this.products = payments;
-
-      this.dataSource = new MatTableDataSource(payments);
-
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-    });
+    this.loadProduct();
   }
 
   ngOnInit() {}
@@ -47,8 +40,25 @@ export class ProductReadComponent implements OnInit {
     }
   }
 
+  loadProduct() {
+    this.productServer.read().subscribe(payments => {
+      this.products = payments;
+
+      this.dataSource = new MatTableDataSource(payments);
+
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
+  }
+
   editProduct(cod: number): void {
     this.router.navigate([`editar-produto/${cod}`]);
+  }
+
+  deleteProduct(id: number): void {
+    this.productServer.delete(id).subscribe(() => {
+      this.loadProduct();
+    });
   }
 
 }
