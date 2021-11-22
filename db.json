@@ -2,8 +2,23 @@
   "products": [
     {
       "id": 1,
-      "categoria": "atacado",
-      "nome": "caneta"
+      "category": "atacado",
+      "name": "caneta"
+    },
+    {
+      "id": 2,
+      "category": "varejo",
+      "name": "tesoura"
+    },
+    {
+      "id": 3,
+      "category": "internacional",
+      "name": "grampeador"
+    },
+    {
+      "id": 4,
+      "category": "atacado",
+      "name": "lápis"
     }
   ]
 }

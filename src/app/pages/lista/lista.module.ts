@@ -4,15 +4,26 @@ import { ListaComponent } from './lista.component';
 import { ProductReadComponent } from '../../components/product/product-read/product-read.component';
 import { LoginRoutingModule } from './lista-routing.module';
 
+import { MatButtonModule} from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 @NgModule({
   declarations: [
     ListaComponent,
-    ProductReadComponent
+    ProductReadComponent,
   ],
   imports: [
     CommonModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
     LoginRoutingModule
   ]
 })
