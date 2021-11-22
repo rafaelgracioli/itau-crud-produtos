@@ -14,12 +14,10 @@ export class ProductUpdateComponent implements OnInit {
   product: Product;
 
   formUpdateProduct = this.fb.group({
-    cod: this.fb.control('', [Validators.required]),
     name: this.fb.control('', [Validators.required]),
     category: this.fb.control('', [Validators.required]),
   });
 
-  get cod() { return this.formUpdateProduct.get('cod'); }
   get name() { return this.formUpdateProduct.get('name'); }
   get category() { return this.formUpdateProduct.get('category'); }
 
@@ -36,7 +34,6 @@ export class ProductUpdateComponent implements OnInit {
       this.product = res[0];
       if (this.product) {
         this.formUpdateProduct.patchValue({
-          cod: this.product.cod,
           name: this.product.name,
           category: this.product.category
         });
@@ -50,7 +47,7 @@ export class ProductUpdateComponent implements OnInit {
     if (this.formUpdateProduct.status === 'VALID') {
       this.product = {
         id: this.product.id,
-        cod: this.cod.value,
+        cod: this.product.cod,
         name: this.name.value,
         category: this.category.value
       };

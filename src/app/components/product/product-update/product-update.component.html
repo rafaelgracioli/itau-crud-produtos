@@ -2,12 +2,6 @@
 
     <div class="form-create-product">
         <mat-form-field appearance="fill">
-            <mat-label>Código</mat-label>
-            <input name="cod" type="number" matInput placeholder="Código" [formControl]="cod" class="input" required>
-            <mat-error *ngIf="cod.invalid">Código é requirido</mat-error>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill">
             <mat-label>Nome</mat-label>
             <input name="name" type="text" matInput placeholder="Nome" [formControl]="name" class="input" required>
             <mat-error *ngIf="name.invalid">Nome é requirido</mat-error>
