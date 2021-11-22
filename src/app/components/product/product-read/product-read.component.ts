@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
@@ -15,14 +16,15 @@ import { ProductService } from '../product.service';
 export class ProductReadComponent implements OnInit {
 
   products: Product[];
-  displayedColumns = ['cod', 'name', 'category'];
+  displayedColumns = ['cod', 'name', 'category', 'edit'];
   dataSource: MatTableDataSource<Product>;
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
 
   constructor(
-    public productServer: ProductService
+    public productServer: ProductService,
+    private router: Router
   ) {
     this.productServer.read().subscribe(payments => {
       this.products = payments;
@@ -43,6 +45,10 @@ export class ProductReadComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  editProduct(cod: number): void {
+    this.router.navigate([`editar-produto/${cod}`]);
   }
 
 }

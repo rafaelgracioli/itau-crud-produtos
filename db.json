@@ -37,10 +37,16 @@
       "id": 6
     },
     {
+      "id": 7,
       "cod": 22,
-      "name": "grade",
+      "name": "grade2",
+      "category": "internacional"
+    },
+    {
+      "cod": 12,
+      "name": "relógio",
       "category": "internacional",
-      "id": 7
+      "id": 8
     }
   ]
 }

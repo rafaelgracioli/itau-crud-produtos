@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'cadastro-produto',
     loadChildren: () => import('./pages/cadastro-produto/cadastro-produto.module').then(m => m.CadastroProdutoModule)
   },
+  {
+    path: 'editar-produto/:cod',
+    loadChildren: () => import('./pages/editar-produto/editar-produto.module').then(m => m.EditarProdutoModule)
+  },
   {path: '', redirectTo: '/lista', pathMatch: 'full'},
 ];
 

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListaModule } from './pages/lista/lista.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroProdutoModule } from './pages/cadastro-produto/cadastro-produto.module';
+import { EditarProdutoModule } from './pages/editar-produto/editar-produto.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CadastroProdutoModule } from './pages/cadastro-produto/cadastro-produto
     AppRoutingModule,
     BrowserAnimationsModule,
     ListaModule,
-    CadastroProdutoModule
+    CadastroProdutoModule,
+    EditarProdutoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
