@@ -17,4 +17,12 @@ export class ProductService {
   read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl);
   }
+
+  create(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, product);
+  }
+
+  findCod(cod: number): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}?cod=${cod}`);
+  }
 }

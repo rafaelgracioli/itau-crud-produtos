@@ -2,23 +2,45 @@
   "products": [
     {
       "id": 1,
+      "cod": 1,
       "category": "atacado",
       "name": "caneta"
     },
     {
       "id": 2,
+      "cod": 2,
       "category": "varejo",
       "name": "tesoura"
     },
     {
       "id": 3,
+      "cod": 3,
       "category": "internacional",
       "name": "grampeador"
     },
     {
       "id": 4,
+      "cod": 4,
       "category": "atacado",
       "name": "lápis"
+    },
+    {
+      "cod": 33,
+      "name": "Teste De Nome",
+      "category": "varejo",
+      "id": 5
+    },
+    {
+      "cod": 333,
+      "name": "Teste Giovana Antônia Patrícia Moura",
+      "category": "varejo",
+      "id": 6
+    },
+    {
+      "cod": 22,
+      "name": "grade",
+      "category": "internacional",
+      "id": 7
     }
   ]
 }

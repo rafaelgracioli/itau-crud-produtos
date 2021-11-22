@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListaModule } from './pages/lista/lista.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroProdutoModule } from './pages/cadastro-produto/cadastro-produto.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ListaModule
+    ListaModule,
+    CadastroProdutoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

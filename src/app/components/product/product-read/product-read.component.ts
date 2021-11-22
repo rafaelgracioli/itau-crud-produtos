@@ -15,7 +15,7 @@ import { ProductService } from '../product.service';
 export class ProductReadComponent implements OnInit {
 
   products: Product[];
-  displayedColumns = ['id', 'name', 'category'];
+  displayedColumns = ['cod', 'name', 'category'];
   dataSource: MatTableDataSource<Product>;
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;

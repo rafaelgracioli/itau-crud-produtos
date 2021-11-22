@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'lista',
     loadChildren: () => import('./pages/lista/lista.module').then(m => m.ListaModule)
   },
+  {
+    path: 'cadastro-produto',
+    loadChildren: () => import('./pages/cadastro-produto/cadastro-produto.module').then(m => m.CadastroProdutoModule)
+  },
   {path: '', redirectTo: '/lista', pathMatch: 'full'},
 ];
 
